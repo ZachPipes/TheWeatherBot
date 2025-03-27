@@ -13,4 +13,9 @@ async def on_ready():
 async def hello(ctx):
     await ctx.send(f'Hello {ctx.author}')
 
-bot.run()
+
+
+# Running the bot
+with open('token', 'r') as file:
+    token = file.readline().strip()
+bot.run(token)
